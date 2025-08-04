@@ -1,16 +1,95 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { ProjectCard } from "@/components/ui/project-card";
+import { cn } from "@/lib/utils";
 
 export default function ProjetosPage() {
+  const [activeTab, setActiveTab] = useState("FrontEnd");
+
+  const allProjects = [
+    {
+      category: "FrontEnd",
+      src: "/img/computador_sistema.png",
+      title: "Sistema de Gestão (Front-End)",
+      description: "Interface moderna e responsiva para um sistema de gestão de transportes.",
+      href: "#",
+    },
+    {
+      category: "BackEnd",
+      src: "/img/dev_png.png",
+      title: "API para E-commerce (Back-End)",
+      description: "API RESTful robusta para uma loja online, com autenticação e gestão de produtos.",
+      href: "#",
+    },
+    {
+      category: "LinkBio",
+      src: "/img/aviao.png",
+      title: "Bio de Viagens",
+      description: "Uma página de links personalizada para um influenciador de viagens.",
+      href: "#",
+    },
+    {
+      category: "FrontEnd",
+      src: "/img/dev_png.png",
+      title: "Landing Page para Devs",
+      description: "Uma página de captura de leads moderna e responsiva, focada em programadores.",
+      href: "#",
+    },
+    {
+      category: "BackEnd",
+      src: "/img/computador_sistema.png",
+      title: "Microsserviço de Pagamentos",
+      description: "Serviço dedicado para processamento de pagamentos com integração Stripe.",
+      href: "#",
+    },
+    {
+      category: "LinkBio",
+      src: "/img/dev_png.png",
+      title: "Linktree para Músico",
+      description: "Agregador de links para um artista, com links para Spotify, Apple Music e redes sociais.",
+      href: "#",
+    },
+  ];
+
+  const filteredProjects = allProjects.filter(
+    (project) => project.category === activeTab
+  );
+
+  const tabs = ["FrontEnd", "BackEnd", "LinkBios"];
+
   return (
-    <div className="flex flex-1 flex-col p-4 md:p-10">
-      <div className="flex justify-between items-center mb-6 flex-shrink-0">
+    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 flex-shrink-0 gap-4">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
           Meus Projetos
         </h1>
+        <div className="flex items-center gap-2 p-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab === "LinkBios" ? "LinkBio" : tab)}
+              className={cn(
+                "px-4 py-1.5 text-sm font-medium rounded-md transition-colors duration-300",
+                activeTab === (tab === "LinkBios" ? "LinkBio" : tab)
+                  ? "bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 shadow-sm"
+                  : "text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700/50"
+              )}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
       </div>
-      <div className="flex-1 bg-white dark:bg-neutral-800 rounded-lg p-6">
-        <p>Aqui ficará a galeria com todos os meus projetos...</p>
-        {/* Você pode adicionar seus componentes de projeto aqui */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProjects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            src={project.src}
+            title={project.title}
+            description={project.description}
+            href={project.href}
+          />
+        ))}
       </div>
     </div>
   );
