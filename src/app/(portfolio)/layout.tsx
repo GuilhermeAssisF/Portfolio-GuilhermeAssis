@@ -92,6 +92,7 @@ export default function PortfolioLayout({
                 <Link
                   key={idx}
                   href={link.href}
+                  onClick={() => setOpen(false)} // Adicionado para fechar a sidebar no clique
                   className={cn(
                     "flex items-center justify-start gap-2 group/sidebar py-2 px-1",
                     pathname === link.href && "bg-neutral-200 dark:bg-neutral-700 rounded-lg"
@@ -152,7 +153,7 @@ export default function PortfolioLayout({
         </SidebarBody>
       </Sidebar>
       
-      {/* Page Content Rendered Here */}
+      {/* O conteúdo da página (children) é renderizado diretamente aqui */}
       {children}
     </main>
   );

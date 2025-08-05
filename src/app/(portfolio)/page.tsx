@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col p-4 md:p-10">
+    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6 flex-shrink-0">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
@@ -50,7 +50,7 @@ export default function Home() {
               width={500}
               height={500}
               alt="Avatar de Guilherme Assis"
-              className="absolute object-contain -bottom-60 -right-20 md:-right-0 lg:-right-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-4"
+              className="absolute object-contain -bottom-70 -right-24 opacity-12 transition-transform duration-500 ease-in-out group-hover:-translate-y-4 md:-bottom-60 md:-right-20 md:opacity-100 lg:-right-0"
             />
           </div>
         </WobbleCard>
@@ -72,7 +72,7 @@ export default function Home() {
                 width={380}
                 height={380}
                 alt="Computador exibindo um sistema"
-                className="absolute object-contain -right-10 -bottom-36 md:-right-4 transition-transform duration-500 ease-in-out group-hover:rotate-3 -scale-x-100"
+                className="absolute object-contain -right-16 -bottom-40 opacity-8 transition-transform duration-500 ease-in-out group-hover:rotate-3 -scale-x-100 md:-right-10 md:-bottom-36 md:opacity-100 lg:-right-4"
               />
           </div>
         </WobbleCard>
