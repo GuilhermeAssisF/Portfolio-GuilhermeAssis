@@ -34,6 +34,27 @@ const TechIcon = ({ icon: Icon, name, hoverColor }: { icon: React.ElementType; n
   </div>
 );
 
+// Ícone personalizado para o Prismic.io
+const PrismicIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z"></path>
+    <path d="m7.5 9.5 4.5 3-4.5 3V9.5Z"></path>
+    <path d="m12 12.5 4.5 3-4.5 3V12.5Z"></path>
+  </svg>
+);
+
+
 // Componente para item de experiência/formação
 const TimelineItem = ({ title, subtitle, date, description }: { title: string; subtitle: string; date: string; description: string }) => (
     <div className="relative pl-6 pb-8 border-l border-neutral-200 dark:border-neutral-700 last:border-l-transparent last:pb-0">
@@ -103,47 +124,47 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <div className="space-y-8">
+      <div className="space-y-8 group/sections">
         {/* Secção 2: Stack de Tecnologias */}
-        <SectionCard title="Minha Stack">
+        <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
+            <SectionCard title="Minha Stack">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-6">
             {techs.map((tech) => (
               <TechIcon key={tech.name} icon={tech.icon} name={tech.name} hoverColor={tech.hoverColor} />
             ))}
           </div>
         </SectionCard>
-
-        <SectionCard title="Resumo Profissional">
-            <p className="mt-2 text-neutral-600 dark:text-neutral-400 max-w-xl">
-              Realizei
-            </p>
-        </SectionCard>
+        </div>
 
         {/* Secção 3: Experiência */}
-        <SectionCard title="Experiência Profissional">
-            <TimelineItem 
-                title="Desenvolvedor Full-Stack"
-                subtitle="Empresa Incrível"
-                date="2022 - Presente"
-                description="Desenvolvimento e manutenção de aplicações web completas, utilizando Next.js no front-end e Express.js no back-end."
-            />
-             <TimelineItem 
-                title="Desenvolvedor Front-End"
-                subtitle="Startup Inovadora"
-                date="2020 - 2022"
-                description="Criação de interfaces de utilizador interativas e responsivas com React e TypeScript, colaborando com equipas de design e produto."
-            />
-        </SectionCard>
+        <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
+            <SectionCard title="Experiência Profissional">
+                <TimelineItem 
+                    title="Desenvolvedor Full-Stack"
+                    subtitle="Empresa Incrível"
+                    date="2022 - Presente"
+                    description="Desenvolvimento e manutenção de aplicações web completas, utilizando Next.js no front-end e Express.js no back-end."
+                />
+                <TimelineItem 
+                    title="Desenvolvedor Front-End"
+                    subtitle="Startup Inovadora"
+                    date="2020 - 2022"
+                    description="Criação de interfaces de utilizador interativas e responsivas com React e TypeScript, colaborando com equipas de design e produto."
+                />
+            </SectionCard>
+        </div>
 
         {/* Secção 4: Formação */}
-        <SectionCard title="Formação Académica">
-             <TimelineItem 
-                title="Análise e Desenvolvimento de Sistemas"
-                subtitle="Universidade de Tecnologia"
-                date="2018 - 2020"
-                description="Curso superior focado em desenvolvimento de software, algoritmos, estruturas de dados e engenharia de software."
-            />
-        </SectionCard>
+        <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
+            <SectionCard title="Formação Académica">
+                <TimelineItem 
+                    title="Análise e Desenvolvimento de Sistemas"
+                    subtitle="Universidade de Tecnologia"
+                    date="2018 - 2020"
+                    description="Curso superior focado em desenvolvimento de software, algoritmos, estruturas de dados e engenharia de software."
+                />
+            </SectionCard>
+        </div>
       </div>
     </div>
   );

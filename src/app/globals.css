@@ -200,3 +200,29 @@
     }
   }
 }
+
+/* Custom Scrollbar Styles */
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--foreground) var(--background);
+}
+
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--foreground);
+  border-radius: 10px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: oklch(from var(--foreground) l c h / 70%);
+}
