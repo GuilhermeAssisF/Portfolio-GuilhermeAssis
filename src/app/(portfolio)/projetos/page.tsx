@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { cn } from "@/lib/utils";
 
 export default function ProjetosPage() {
-  const [activeTab, setActiveTab] = useState("FrontEnd");
+  const [activeTab, setActiveTab] = useState("BackEnd");
 
   const allProjects = [
     {
@@ -16,7 +16,7 @@ export default function ProjetosPage() {
     },
     {
       category: "BackEnd",
-      src: "/img/dev_png.png",
+      src: "/img_projetos/backend_1.png",
       title: "API para E-commerce (Back-End)",
       description: "API RESTful robusta para uma loja online, com autenticação e gestão de produtos.",
       href: "#",
@@ -37,7 +37,7 @@ export default function ProjetosPage() {
     },
     {
       category: "BackEnd",
-      src: "/img/computador_sistema.png",
+      src: "/img_projetos/backend_3.png",
       title: "Microsserviço de Pagamentos",
       description: "Serviço dedicado para processamento de pagamentos com integração Stripe.",
       href: "#",
@@ -55,7 +55,7 @@ export default function ProjetosPage() {
     (project) => project.category === activeTab
   );
 
-  const tabs = ["FrontEnd", "BackEnd", "LinkBios"];
+  const tabs = ["BackEnd", "FrontEnd", "LinkBios"];
 
   return (
     <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">

@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ src, title, description, href }: ProjectCardProps) => {
   return (
     <div className="group relative block w-full h-full p-4 overflow-hidden bg-neutral-50 dark:bg-neutral-800 border border-black/[0.1] dark:border-white/[0.2] rounded-2xl flex flex-col">
-      <div className="relative h-48 w-full rounded-lg overflow-hidden mb-4">
+      <div className="relative h-70 w-full rounded-lg overflow-hidden mb-4">
         <Image
           src={src}
           alt={title}
