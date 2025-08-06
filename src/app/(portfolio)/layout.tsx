@@ -11,9 +11,10 @@ import {
   IconUser,
   IconTool,
   IconMail,
+  IconBrandLinktree,
   IconSun,
   IconMoon,
-  IconBrandLinktree,
+  IconBrandWhatsapp, // Ícone importado
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
@@ -100,7 +101,7 @@ export default function PortfolioLayout({
                 <Link
                   key={idx}
                   href={link.href}
-                  onClick={() => setOpen(false)} // Adicionado para fechar a sidebar no clique
+                  onClick={() => setOpen(false)}
                   className={cn(
                     "flex items-center justify-start gap-2 group/sidebar py-2 px-1",
                     pathname === link.href && "bg-neutral-200 dark:bg-neutral-700 rounded-lg"
@@ -141,12 +142,32 @@ export default function PortfolioLayout({
                 Tema
               </motion.span>
             </button>
+            {/* Ícone do WhatsApp adicionado aqui */}
+            <a
+              // IMPORTANTE: Substitua SEUNUMERO pelo seu número com código do país (ex: 5511999999999)
+              href="https://wa.me/5535999665912"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-start gap-2 group/sidebar py-2 w-full cursor-pointer"
+              aria-label="Contato via WhatsApp"
+            >
+              <IconBrandWhatsapp className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+              <motion.span
+                animate={{
+                  display: open ? "inline-block" : "none",
+                  opacity: open ? 1 : 0,
+                }}
+                className="text-neutral-700 dark:text-neutral-200 text-sm"
+              >
+                WhatsApp
+              </motion.span>
+            </a>
             <SidebarLink
               link={{
                 label: "Guilherme Assis",
                 href: "#",
                 icon: (
-                  <div className="relative h-7 w-7 flex-shrink-0">
+                  <div className="relative h-8 w-8 flex-shrink-0">
                     <Image
                       src="/img/1728762062177.jpg"
                       className="rounded-full object-cover"
@@ -161,7 +182,6 @@ export default function PortfolioLayout({
         </SidebarBody>
       </Sidebar>
       
-      {/* O conteúdo da página (children) é renderizado diretamente aqui */}
       {children}
     </main>
   );

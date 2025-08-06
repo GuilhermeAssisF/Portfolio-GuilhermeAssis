@@ -7,18 +7,28 @@ import {
   IconBrandLinkedin,
   IconBrandInstagram,
   IconMail,
+  IconBrandWhatsapp,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 // Nenhuma alteração necessária aqui
 const contacts = [
   {
+    icon: <IconBrandWhatsapp className="h-12 w-12" />,
+    title: "WhatsApp",
+    description: "Entre em contato diretamente comigo para uma resposta mais rápida.",
+    href: "https://wa.me/5535999665912", // Lembre-se de substituir SEUNUMERO pelo seu número com o código do país
+    cta: "Iniciar Conversa",
+    className: "col-span-2",
+    background: "bg-emerald-500",
+  },
+  {
     icon: <IconMail className="h-12 w-12" />,
     title: "Email",
     description: "A melhor forma de me contactar para propostas de projetos e colaborações.",
     href: "mailto:assisguilhermefernandes@gmail.com",
     cta: "Enviar Email",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 lg:col-span-1",
     background: "bg-sky-500",
   },
   {
@@ -45,7 +55,7 @@ const contacts = [
     description: "Siga-me para ver os bastidores dos meus projetos e inspirações diárias.",
     href: "https://www.instagram.com/gilo_art/",
     cta: "Seguir",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-1 lg:col-span-1",
     background: "bg-rose-500",
   },
 ];
