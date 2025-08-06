@@ -1,3 +1,4 @@
+// src/app/(portfolio)/servicos/page.tsx
 "use client";
 import React from "react";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -12,7 +13,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const services = [
-  {
+    {
     icon: <IconCode className="h-12 w-12" />,
     title: "Desenvolvimento Front-End",
     description: "Criação de interfaces de utilizador modernas, responsivas e interativas com as tecnologias mais recentes.",
@@ -44,13 +45,15 @@ const services = [
 
 export default function ServicosPage() {
   return (
-    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">
+    // Container principal ajustado para preencher a tela
+    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-hidden">
       <div className="flex justify-between items-center mb-6 flex-shrink-0">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
           Serviços
         </h1>
       </div>
-      <BentoGrid>
+      {/* BentoGrid ajustada para ocupar o espaço restante com 2 linhas */}
+      <BentoGrid className="flex-1 grid-cols-3 grid-rows-2 gap-4">
         {services.map((service, index) => (
           <BentoCard key={index} className={cn(service.className, service.background)}>
             <div className="flex flex-col justify-between h-full p-6 group cursor-emoji">

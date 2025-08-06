@@ -1,3 +1,4 @@
+// src/app/(portfolio)/contato/page.tsx
 "use client";
 import React from "react";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -9,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
+// Nenhuma alteração necessária aqui
 const contacts = [
   {
     icon: <IconMail className="h-12 w-12" />,
@@ -50,13 +52,15 @@ const contacts = [
 
 export default function ContatoPage() {
   return (
-    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">
+    // Container principal modificado para não permitir rolagem interna
+    <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-hidden">
       <div className="flex justify-between items-center mb-6 flex-shrink-0">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
           Contato
         </h1>
       </div>
-      <BentoGrid>
+      {/* BentoGrid agora preenche o espaço e define 2 linhas para telas grandes */}
+      <BentoGrid className="flex-1 grid-cols-3 grid-rows-2 gap-4">
         {contacts.map((contact, index) => (
           <BentoCard key={index} className={cn(contact.className, contact.background)}>
              <a 
