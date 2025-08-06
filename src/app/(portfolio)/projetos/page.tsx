@@ -22,13 +22,6 @@ export default function ProjetosPage() {
       href: "#",
     },
     {
-      category: "LinkBio",
-      src: "/img/aviao.png",
-      title: "Bio de Viagens",
-      description: "Uma página de links personalizada para um influenciador de viagens.",
-      href: "#",
-    },
-    {
       category: "FrontEnd",
       src: "/img/dev_png.png",
       title: "Landing Page para Devs",
@@ -42,20 +35,13 @@ export default function ProjetosPage() {
       description: "Serviço dedicado para processamento de pagamentos com integração Stripe.",
       href: "#",
     },
-    {
-      category: "LinkBio",
-      src: "/img/dev_png.png",
-      title: "Linktree para Músico",
-      description: "Agregador de links para um artista, com links para Spotify, Apple Music e redes sociais.",
-      href: "#",
-    },
   ];
 
   const filteredProjects = allProjects.filter(
     (project) => project.category === activeTab
   );
 
-  const tabs = ["BackEnd", "FrontEnd", "LinkBios"];
+  const tabs = ["BackEnd", "FrontEnd"];
 
   return (
     <div className="flex flex-1 flex-col p-4 md:p-10 h-full overflow-y-auto">
@@ -63,14 +49,16 @@ export default function ProjetosPage() {
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
           Meus Projetos
         </h1>
-        <div className="flex items-center gap-2 p-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
+        <div className="flex w-full md:w-auto items-center gap-2 p-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
           {tabs.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab === "LinkBios" ? "LinkBio" : tab)}
+              onClick={() => setActiveTab(tab)}
               className={cn(
-                "px-4 py-1.5 text-sm font-medium rounded-md transition-colors duration-300",
-                activeTab === (tab === "LinkBios" ? "LinkBio" : tab)
+                // Classes base para os botões, incluindo as responsivas
+                "flex-1 md:flex-initial text-center px-4 py-1.5 text-sm font-medium rounded-md transition-colors duration-300",
+                // Classes condicionais para o estado ativo/inativo
+                activeTab === tab
                   ? "bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 shadow-sm"
                   : "text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700/50"
               )}

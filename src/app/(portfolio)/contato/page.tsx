@@ -14,7 +14,7 @@ const contacts = [
     icon: <IconMail className="h-12 w-12" />,
     title: "Email",
     description: "A melhor forma de me contactar para propostas de projetos e colaborações.",
-    href: "mailto:seuemail@exemplo.com",
+    href: "mailto:assisguilhermefernandes@gmail.com",
     cta: "Enviar Email",
     className: "col-span-3 lg:col-span-2",
     background: "bg-sky-500",
@@ -23,7 +23,7 @@ const contacts = [
     icon: <IconBrandLinkedin className="h-12 w-12" />,
     title: "LinkedIn",
     description: "Conecte-se comigo para ver a minha trajetória profissional e recomendações.",
-    href: "#", // Substitua pelo seu link do LinkedIn
+    href: "https://www.linkedin.com/in/guilherme-assis-1115a0274/", // Substitua pelo seu link do LinkedIn
     cta: "Visitar Perfil",
     className: "col-span-3 lg:col-span-1",
     background: "bg-blue-500",
@@ -32,7 +32,7 @@ const contacts = [
     icon: <IconBrandGithub className="h-12 w-12" />,
     title: "GitHub",
     description: "Explore os meus repositórios de código e projetos de código aberto.",
-    href: "#", // Substitua pelo seu link do GitHub
+    href: "https://github.com/GuilhermeAssisF", // Substitua pelo seu link do GitHub
     cta: "Ver Projetos",
     className: "col-span-3 lg:col-span-1",
     background: "bg-purple-500",
@@ -41,7 +41,7 @@ const contacts = [
     icon: <IconBrandInstagram className="h-12 w-12" />,
     title: "Instagram",
     description: "Siga-me para ver os bastidores dos meus projetos e inspirações diárias.",
-    href: "#", // Substitua pelo seu link do Instagram
+    href: "https://www.instagram.com/gilo_art/", // Substitua pelo seu link do Instagram
     cta: "Seguir",
     className: "col-span-3 lg:col-span-2",
     background: "bg-rose-500",

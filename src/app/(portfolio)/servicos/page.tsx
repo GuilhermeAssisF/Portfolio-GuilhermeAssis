@@ -9,6 +9,7 @@ import {
   IconBrandLinktree,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const services = [
   {
@@ -21,7 +22,7 @@ const services = [
   {
     icon: <IconApi className="h-12 w-12" />,
     title: "Desenvolvimento Back-End",
-    description: "Construção de APIs robustas, seguras e escaláveis para suportar as suas aplicações.",
+    description: "Construção de Sistemas e APIs robustas, seguras e escaláveis para suportar as suas aplicações.",
     className: "col-span-3 lg:col-span-1",
     background: "bg-amber-500",
   },
@@ -62,12 +63,12 @@ export default function ServicosPage() {
                   {service.description}
                 </p>
               </div>
-              <a
+              <Link
                 href="/contato"
                 className="flex items-center gap-2 text-sm font-medium text-white/80 group-hover:text-white transition-colors"
               >
                 Saber mais <IconArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </BentoCard>
         ))}

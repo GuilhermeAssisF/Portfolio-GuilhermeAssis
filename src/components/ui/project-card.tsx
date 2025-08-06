@@ -32,7 +32,7 @@ export const ProjectCard = ({ src, title, description, href }: ProjectCardProps)
           rel="noopener noreferrer" 
           className="w-full inline-block"
         >
-          <button className="w-full px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-300">
+          <button className="w-full px-4 py-2 rounded-lg bg-neutral-700 dark:bg-neutral-700 text-neutral-50 dark:text-neutral-300 text-sm font-medium hover:bg-neutral-900 dark:hover:bg-neutral-600 transition-colors duration-300">
             <div className="flex items-center justify-center gap-2">
               <IconBrandGithub className="h-4 w-4" />
               <span>Ver no Github</span>

@@ -98,10 +98,10 @@ export default function SobrePage() {
             Guilherme Assis
           </h1>
           <p className="mt-2 text-neutral-600 dark:text-neutral-400 max-w-xl">
-            Desenvolvedor Full-Stack apaixonado por criar soluções inovadoras e interfaces intuitivas. Com experiência em React, Next.js e Node.js, transformo ideias em realidade digital.
+            Desenvolvedor Full-Stack apaixonado por criar soluções inovadoras e interfaces intuitivas. Com experiência em React, Next.js e Java, transformo ideias em realidade digital.
           </p>
           <div className="mt-4 flex items-center gap-4">
-            <a href="/caminho/para/seu/cv.pdf" download>
+            <a href="https://docs.google.com/document/d/1W1WCqgV_aEPAkgndblwSVrxxJYnITizL07xnSoj_eQQ/edit?usp=sharing">
               <button className="px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-300">
                 <div className="flex items-center gap-2">
                   <IconFileCv className="h-4 w-4" />
@@ -110,13 +110,13 @@ export default function SobrePage() {
               </button>
             </a>
             <div className="flex items-center gap-3">
-              <a href="#" aria-label="Github" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
+              <a href="https://github.com/GuilhermeAssisF" target="_blank" aria-label="Github" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
                 <IconBrandGithub />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
+              <a href="https://www.linkedin.com/in/guilherme-assis-1115a0274/" target="_blank" aria-label="LinkedIn" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
                 <IconBrandLinkedin />
               </a>
-              <a href="#" aria-label="Instagram" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
+              <a href="https://www.instagram.com/gilo_art/" target="_blank" aria-label="Instagram" className="text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100">
                 <IconBrandInstagram />
               </a>
             </div>
@@ -136,20 +136,31 @@ export default function SobrePage() {
         </SectionCard>
         </div>
 
+        {/* Secção 3: Resumo Porfissional */}
+        <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
+            <SectionCard title="Resumo Porfissional">
+                <p className="mt-2 text-neutral-600 dark:text-neutral-400">Experiência de 02 anos em desenvolvimento de sistemas, atuando tanto no front-end (como no desenvolvimento de um Acervo Online para uma instituição pública) quanto no back-end (desenvolvimento de um CRUD Manager Web em Java).<br/><br/>
+                  Atuação nas tecnologias: HTML, CSS, TypeScript, Next, React, MySQL, Java, Python. Atualmente em processo de especialização em Java com Spring Framework.<br/><br/>
+                  Além da área de tecnologia, possuo experiência na área administrativa e no setor financeiro, com gestão de dados, controle financeiro e otimização de processos.<br/><br/>
+                  Cursando 6º período de Sistemas de Informação em transição de carreira e apaixonado por tecnologia.
+                </p>
+            </SectionCard>
+        </div>
+
         {/* Secção 3: Experiência */}
         <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
             <SectionCard title="Experiência Profissional">
                 <TimelineItem 
-                    title="Desenvolvedor Full-Stack"
-                    subtitle="Empresa Incrível"
-                    date="2022 - Presente"
-                    description="Desenvolvimento e manutenção de aplicações web completas, utilizando Next.js no front-end e Express.js no back-end."
+                    title="Desenvolvedor Freelancer"
+                    subtitle="Gilo Art Developer"
+                    date="2024 - Presente"
+                    description="Desenvolvimento e manutenção de sistemas web para empresas com Java e Spring, criação de páginas dinâmicas com react.js utilizando next e prismic.io para influenciadores, projetos voluntários para ongs, comércios e a criação de linkbios personalizados."
                 />
                 <TimelineItem 
-                    title="Desenvolvedor Front-End"
-                    subtitle="Startup Inovadora"
-                    date="2020 - 2022"
-                    description="Criação de interfaces de utilizador interativas e responsivas com React e TypeScript, colaborando com equipas de design e produto."
+                    title="Gerente Administrativo Financeiro"
+                    subtitle="FF Transportes"
+                    date="2022 - Presente"
+                    description="Atuação com Pacote Office na organização e gerenciamento de dados, atuando desde na área financeira e facilitando a busca e visualização de informações necessárias no dia a dia da empresa, otimizando processos internos."
                 />
             </SectionCard>
         </div>
@@ -158,10 +169,10 @@ export default function SobrePage() {
         <div className="transition-all duration-300 group-hover/sections:opacity-50 hover:!opacity-100 hover:scale-105">
             <SectionCard title="Formação Académica">
                 <TimelineItem 
-                    title="Análise e Desenvolvimento de Sistemas"
-                    subtitle="Universidade de Tecnologia"
-                    date="2018 - 2020"
-                    description="Curso superior focado em desenvolvimento de software, algoritmos, estruturas de dados e engenharia de software."
+                    title="Sistemas de Informação"
+                    subtitle="Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas"
+                    date="2023 - 2026"
+                    description="Curso superior focado em desenvolvimento de software, algoritmos, estruturas de dados, engenharia de software e gestão da tecnologia da."
                 />
             </SectionCard>
         </div>
