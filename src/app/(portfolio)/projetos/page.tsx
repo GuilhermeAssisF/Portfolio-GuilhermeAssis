@@ -56,7 +56,7 @@ export default function ProjetosPage() {
               onClick={() => setActiveTab(tab)}
               className={cn(
                 // Classes base para os botões, incluindo as responsivas
-                "flex-1 md:flex-initial text-center px-4 py-1.5 text-sm font-medium rounded-md transition-colors duration-300",
+                "flex-1 md:flex-initial text-center px-4 py-1.5 text-sm font-medium rounded-md transition-colors duration-300 cursor-emoji",
                 // Classes condicionais para o estado ativo/inativo
                 activeTab === tab
                   ? "bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 shadow-sm"

@@ -40,7 +40,7 @@ export default function Home() {
           className="col-span-1 md:row-span-2"
         >
           <WobbleCard
-            containerClassName="group bg-indigo-800 h-full" // <-- CORREÇÃO APLICADA AQUI
+            containerClassName="group bg-indigo-800 h-full cursor-emoji" // <-- CORREÇÃO APLICADA AQUI
             className="h-full"
           >
             <div className="relative h-full" >
@@ -70,7 +70,7 @@ export default function Home() {
           className="col-span-1 md:col-span-2"
         >
           <WobbleCard
-            containerClassName="group bg-pink-800 h-full" // <-- CORREÇÃO APLICADA AQUI
+            containerClassName="group bg-pink-800 h-full cursor-emoji" // <-- CORREÇÃO APLICADA AQUI
             className="h-full"
           >
             <div className="relative h-full">
@@ -100,7 +100,7 @@ export default function Home() {
           className="col-span-1"
         >
           <WobbleCard
-            containerClassName="group bg-sky-800 h-full" // <-- CORREÇÃO APLICADA AQUI
+            containerClassName="group bg-sky-800 h-full cursor-emoji" // <-- CORREÇÃO APLICADA AQUI
             className="h-full"
           >
             <div className="relative h-full">
@@ -130,7 +130,7 @@ export default function Home() {
           className="col-span-1"
         >
           <WobbleCard 
-            containerClassName="group bg-emerald-800 h-full" // <-- CORREÇÃO APLICADA AQUI
+            containerClassName="group bg-emerald-800 h-full cursor-emoji" // <-- CORREÇÃO APLICADA AQUI
             className="h-full"
           >
             <div className="relative h-full">

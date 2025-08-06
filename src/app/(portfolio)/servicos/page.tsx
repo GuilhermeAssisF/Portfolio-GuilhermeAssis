@@ -53,7 +53,7 @@ export default function ServicosPage() {
       <BentoGrid>
         {services.map((service, index) => (
           <BentoCard key={index} className={cn(service.className, service.background)}>
-            <div className="flex flex-col justify-between h-full p-6 group">
+            <div className="flex flex-col justify-between h-full p-6 group cursor-emoji">
               <div>
                 {React.cloneElement(service.icon, { className: "h-12 w-12 text-white" })}
                 <h3 className="text-xl font-semibold text-white mt-4">

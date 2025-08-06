@@ -23,7 +23,7 @@ const contacts = [
     icon: <IconBrandLinkedin className="h-12 w-12" />,
     title: "LinkedIn",
     description: "Conecte-se comigo para ver a minha trajetória profissional e recomendações.",
-    href: "https://www.linkedin.com/in/guilherme-assis-1115a0274/", // Substitua pelo seu link do LinkedIn
+    href: "https://www.linkedin.com/in/guilherme-assis-1115a0274/",
     cta: "Visitar Perfil",
     className: "col-span-3 lg:col-span-1",
     background: "bg-blue-500",
@@ -32,7 +32,7 @@ const contacts = [
     icon: <IconBrandGithub className="h-12 w-12" />,
     title: "GitHub",
     description: "Explore os meus repositórios de código e projetos de código aberto.",
-    href: "https://github.com/GuilhermeAssisF", // Substitua pelo seu link do GitHub
+    href: "https://github.com/GuilhermeAssisF",
     cta: "Ver Projetos",
     className: "col-span-3 lg:col-span-1",
     background: "bg-purple-500",
@@ -41,7 +41,7 @@ const contacts = [
     icon: <IconBrandInstagram className="h-12 w-12" />,
     title: "Instagram",
     description: "Siga-me para ver os bastidores dos meus projetos e inspirações diárias.",
-    href: "https://www.instagram.com/gilo_art/", // Substitua pelo seu link do Instagram
+    href: "https://www.instagram.com/gilo_art/",
     cta: "Seguir",
     className: "col-span-3 lg:col-span-2",
     background: "bg-rose-500",
@@ -59,7 +59,12 @@ export default function ContatoPage() {
       <BentoGrid>
         {contacts.map((contact, index) => (
           <BentoCard key={index} className={cn(contact.className, contact.background)}>
-             <a href={contact.href} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between h-full p-6 group">
+             <a 
+              href={contact.href} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex flex-col justify-between h-full p-6 group cursor-emoji"
+             >
               <div>
                 {React.cloneElement(contact.icon, { className: "h-12 w-12 text-white" })}
                 <h3 className="text-xl font-semibold text-white mt-4">
