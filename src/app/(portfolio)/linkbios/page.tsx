@@ -13,10 +13,10 @@ export default function LinkbiosPage() {
 
   const linkbios = [
     {
-      src: "/img_projetos/frontend_2.png",
-      title: "Portfólio Pessoal",
-      stats: "Tecnologias: Next.js, TailwindCSS",
-      href: "#",
+      src: "/img_projetos/linkbio_1.png",
+      title: "Meu Linkbio",
+      stats: "Meu linkbio pessoal",
+      href: "https://linkbio-giloart.vercel.app/",
     },
     {
       src: "/img_projetos/frontend_1.png",
