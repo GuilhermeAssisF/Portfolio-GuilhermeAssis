@@ -18,30 +18,7 @@ export default function LinkbiosPage() {
       stats: "Meu linkbio pessoal",
       href: "https://linkbio-giloart.vercel.app/",
     },
-    {
-      src: "/img_projetos/frontend_1.png",
-      title: "Acervo Escolar",
-      stats: "Tecnologias: React, Prismic.io",
-      href: "#",
-    },
-    {
-      src: "/img_projetos/backend_1.png",
-      title: "Sistema de Transportes",
-      stats: "Tecnologias: Java, Spring Boot",
-      href: "#",
-    },
-    {
-      src: "/img_projetos/backend_2.png",
-      title: "Controle de Atendimento",
-      stats: "Tecnologias: Java, JSP",
-      href: "#",
-    },
-    {
-      src: "/img_projetos/backend_3.png",
-      title: "Login de Sistema",
-      stats: "Tecnologias: Java, Swing",
-      href: "#",
-    },
+
   ];
 
   const scroll = (direction: "left" | "right") => {
